@@ -17,8 +17,9 @@ namespace Entities
         private void Update()
         {
             var vel = rb.velocity;
-            var ang = Mathf.Atan2(vel.y, 10) * Mathf.Rad2Deg - 90f;
+            var ang = Mathf.Atan2(vel.y, 10) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, ang));
+            transform.position = new Vector3(0, transform.position.y);
             Jump();
         }
 
@@ -32,7 +33,7 @@ namespace Entities
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag(""))
+            if (other.gameObject.CompareTag("Enemy"))
             {
                 AudioManager.Instance.Play(AudioName.PlayerExplosion);
                 Explode();

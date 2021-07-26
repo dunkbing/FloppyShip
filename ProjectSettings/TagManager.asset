@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3565882977
+    locked: 0
+  - name: Star
+    uniqueID: 3140153229
+    locked: 0
+  - name: Cloud
+    uniqueID: 26888701
+    locked: 0
+  - name: Foreground
+    uniqueID: 731103009
+    locked: 0
+  - name: Player
+    uniqueID: 3701147037
     locked: 0
