@@ -1,22 +1,24 @@
+// Created by Binh Bui on 07, 27, 2021
+
 using UnityEngine;
 
 namespace Entities.Background
 {
     public class Bound : MonoBehaviour, IMove
     {
-        private readonly float _startPos = -30f;
+        private readonly float _resetPos = -30f;
 
-        private Vector3 _newPos;
+        private Vector3 _spawnPos;
         private readonly float _speed = 10;
 
         // Start is called before the first frame update
         private void Start()
         {
-            _newPos = new Vector3(90f, 0);
+            _spawnPos = new Vector3(90f, 0);
         }
 
         // Update is called once per frame
-        private void Update()
+        private void FixedUpdate()
         {
             Move();
         }
@@ -24,12 +26,14 @@ namespace Entities.Background
         public void Move()
         {
             // reset pos
-            if (transform.position.x <= _startPos)
+            if (transform.position.x <= _resetPos)
             {
-                transform.position += _newPos;
+                var newPos = transform.position + _spawnPos;
+                Instantiate(BoundContainer.Instance.Get(), newPos, Quaternion.identity);
+                Destroy(gameObject);
             }
             // move
-            transform.position += Vector3.left * (_speed * Time.deltaTime);
+            transform.position += Vector3.left * (_speed * Time.fixedDeltaTime);
         }
     }
 }

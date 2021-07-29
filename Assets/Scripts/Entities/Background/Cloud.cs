@@ -1,6 +1,5 @@
 // Created by Binh Bui on 07, 27, 2021
 
-using System;
 using UnityEngine;
 
 namespace Entities.Background
