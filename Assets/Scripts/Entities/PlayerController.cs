@@ -22,9 +22,9 @@ namespace Entities
             // _gravity = rb.gravityScale;
             OnExplode += (() =>
             {
-                Destroy(Instantiate(fragments, transform.position, Quaternion.identity), 2f);
+                Destroy(Instantiate(fragments, transform.position, Quaternion.identity), 1.5f);
                 Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 1f);
-                Explosion.Explode(transform.position, .3f, 18f);
+                Explosion.Explode(transform.position, .3f, 50f);
                 MainMenu.Instance.PauseGame();
             });
         }

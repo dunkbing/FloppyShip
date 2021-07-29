@@ -1,6 +1,7 @@
 // Created by Binh Bui on 07, 27, 2021
 
 using UnityEngine;
+using Utilities;
 
 namespace Entities.Background
 {
@@ -25,6 +26,11 @@ namespace Entities.Background
 
         public void Move()
         {
+            if (GameStats.Paused)
+            {
+                return;
+            }
+
             // reset pos
             if (transform.position.x <= _resetPos)
             {

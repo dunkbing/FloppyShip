@@ -1,6 +1,7 @@
 // Created by Binh Bui on 07, 27, 2021
 
 using UnityEngine;
+using Utilities;
 
 namespace Entities.Background
 {
@@ -20,6 +21,11 @@ namespace Entities.Background
 
         public void Move()
         {
+            if (GameStats.Paused)
+            {
+                return;
+            }
+
             transform.position += Vector3.left * (_speed * parallaxEffect * Time.deltaTime);
         }
     }
