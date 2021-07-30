@@ -55,6 +55,9 @@ TagManager:
   - name: Foreground
     uniqueID: 731103009
     locked: 0
-  - name: Player
+  - name: FIre
+    uniqueID: 776925547
+    locked: 0
+  - name: Actor
     uniqueID: 3701147037
     locked: 0

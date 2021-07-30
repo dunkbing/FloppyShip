@@ -20,7 +20,7 @@ namespace UI
 
         public void StartGame()
         {
-            GameStats.Paused = false;
+            GameStats.State = GameState.Running;
             GameStats.CurrentPlayer.SetActive(true);
             PlayerController.Instance.PlayGame();
 
@@ -29,7 +29,7 @@ namespace UI
 
         public void PauseGame()
         {
-            GameStats.Paused = true;
+            GameStats.State = GameState.Stop;
 
             menu.SetActive(true);
         }

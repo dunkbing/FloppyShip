@@ -6,7 +6,14 @@ namespace Utilities
 {
     public class GameStats : MonoBehaviour
     {
-        public static bool Paused = true;
+        public static GameState State = GameState.Pause;
         public static GameObject CurrentPlayer;
+    }
+
+    public enum GameState
+    {
+        Running,
+        Stop,
+        Pause,
     }
 }

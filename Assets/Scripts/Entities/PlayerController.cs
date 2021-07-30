@@ -24,14 +24,14 @@ namespace Entities
             {
                 Destroy(Instantiate(fragments, transform.position, Quaternion.identity), 1.5f);
                 Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 1f);
-                Explosion.Explode(transform.position, .3f, 50f);
+                Explosion.Explode(transform.position, .3f, 70f);
                 MainMenu.Instance.PauseGame();
             });
         }
 
         private void Update()
         {
-            if (GameStats.Paused)
+            if (GameStats.State == GameState.Pause || GameStats.State == GameState.Stop)
             {
                 return;
             }
@@ -62,7 +62,7 @@ namespace Entities
         {
             if (other.gameObject.CompareTag("Bound"))
             {
-                if (!GameStats.Paused)
+                if (GameStats.State != GameState.Pause)
                 {
                     Explode();
                 }

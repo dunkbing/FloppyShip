@@ -21,7 +21,7 @@ namespace Entities.Background
 
         public void Move()
         {
-            if (GameStats.Paused)
+            if (GameStats.State == GameState.Stop)
             {
                 return;
             }

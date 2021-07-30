@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 9075f59bcc83d614f97f9a35d11250ce
+guid: 296327eaaa47cce48973869815627f85
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3432366090275036200
-    second: fragments1_0
+      213: -2899862903683867279
+    second: fragments_1
   - first:
-      213: -3492135780858305566
-    second: fragments1_1
+      213: 7584497979690994568
+    second: fragments_2
   - first:
-      213: -7183250810364940506
-    second: fragments1_2
+      213: 7541096794945272629
+    second: fragments_3
   - first:
-      213: 8715464755660298362
-    second: fragments1_4
+      213: -2122763889845326166
+    second: fragments_4
   - first:
-      213: -7708218545827671700
-    second: fragments1_6
-  - first:
-      213: 1138100213570260563
-    second: fragments1_7
+      213: -3010993530288764702
+    second: fragments_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fragments1_0
+      name: fragments_1
       rect:
         serializedVersion: 2
-        x: 220
-        y: 647
-        width: 63
-        height: 44
+        x: 636
+        y: 1631
+        width: 273
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d36f02f939cd50d0800000000000000
-      internalID: -3432366090275036200
+      spriteID: 17d1790ad0e91c7d0800000000000000
+      internalID: -2899862903683867279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fragments1_1
+      name: fragments_2
       rect:
         serializedVersion: 2
-        x: 406
-        y: 640
-        width: 78
-        height: 50
+        x: 1375
+        y: 1654
+        width: 201
+        height: 153
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e3628a6201798fc0800000000000000
-      internalID: -3492135780858305566
+      spriteID: 88b46276abc814960800000000000000
+      internalID: 7584497979690994568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fragments1_2
+      name: fragments_3
       rect:
         serializedVersion: 2
-        x: 614
-        y: 622
-        width: 90
-        height: 62
+        x: 401
+        y: 1185
+        width: 266
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62f29ab4277ff4c90800000000000000
-      internalID: -7183250810364940506
+      spriteID: 53bbc8f949b57a860800000000000000
+      internalID: 7541096794945272629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fragments1_4
+      name: fragments_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 469
-        width: 61
-        height: 51
+        x: 885
+        y: 1060
+        width: 275
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a78919dc40d83f870800000000000000
-      internalID: 8715464755660298362
+      spriteID: aae2eb33d7d6a82e0800000000000000
+      internalID: -2122763889845326166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fragments1_6
+      name: fragments_5
       rect:
         serializedVersion: 2
-        x: 412
-        y: 444
-        width: 61
-        height: 64
+        x: 1386
+        y: 1074
+        width: 333
+        height: 281
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,29 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c611ddc8218e60590800000000000000
-      internalID: -7708218545827671700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fragments1_7
-      rect:
-        serializedVersion: 2
-        x: 659
-        y: 444
-        width: 63
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35ec6a44d185bcf00800000000000000
-      internalID: 1138100213570260563
+      spriteID: 2e8832e465dc636d0800000000000000
+      internalID: -3010993530288764702
       vertices: []
       indices: 
       edges: []
