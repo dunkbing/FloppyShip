@@ -1,6 +1,6 @@
 // Created by Binh Bui on 07, 27, 2021
 
-namespace Entities.Background
+namespace Entities
 {
     public interface IMove
     {

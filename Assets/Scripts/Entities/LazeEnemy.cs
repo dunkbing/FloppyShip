@@ -2,7 +2,7 @@
 
 namespace Entities
 {
-    public class Enemy : Entity
+    public class LazeEnemy : Entity
     {
 
     }

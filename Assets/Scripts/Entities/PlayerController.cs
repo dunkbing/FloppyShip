@@ -55,7 +55,6 @@ namespace Entities
         {
             rb.AddForce(Vector2.up * (rb.gravityScale * jumpForce * Time.deltaTime));
             fireParticle.Play();
-
         }
 
         private void OnCollisionEnter2D(Collision2D other)
