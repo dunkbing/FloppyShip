@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5759164330178352904}
   - component: {fileID: 5759164330178352907}
-  - component: {fileID: 5759164330178352906}
   - component: {fileID: 5759164330178352905}
+  - component: {fileID: 5759164330178352906}
   m_Layer: 0
   m_Name: CircleBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 937580987
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d966706eaa65894d8164f1b83993968, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5759164330178352906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5759164330178352909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385ec07bc0024be4f8b45513d023cfe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.2
 --- !u!58 &5759164330178352905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,3 +100,16 @@ CircleCollider2D:
   m_Offset: {x: -0.017361343, y: 0}
   serializedVersion: 2
   m_Radius: 1.0905609
+--- !u!114 &5759164330178352906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759164330178352909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ec07bc0024be4f8b45513d023cfe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 6177146840010447402, guid: 1794fe9bea57fe54999426eb65288655, type: 3}

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Bound
+  - Obstacle
+  - Fragment
+  - Star
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -13,10 +17,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - PostProcessing
+  - Fragment
+  - Bound
+  - Obstacle
   - 
   - 
   - 
@@ -43,6 +47,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 337858229
+    locked: 0
+  - name: Bg1
+    uniqueID: 3649870211
+    locked: 0
+  - name: Bg2
+    uniqueID: 430876237
+    locked: 0
+  - name: Bg3
+    uniqueID: 502166295
+    locked: 0
+  - name: Bg4
+    uniqueID: 2504824027
+    locked: 0
   - name: Background
     uniqueID: 3565882977
     locked: 0
@@ -51,6 +70,9 @@ TagManager:
     locked: 0
   - name: Cloud
     uniqueID: 26888701
+    locked: 0
+  - name: Obstacle
+    uniqueID: 4271769345
     locked: 0
   - name: Foreground
     uniqueID: 731103009

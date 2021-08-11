@@ -8,9 +8,9 @@ namespace Utilities
 {
     public static class AudioName
     {
-        public const string Background = "background";
-        public const string PlayerExplosion = "player_explosion";
-        public const string EnemyExplosion = "enemy_explosion";
+        public const string Background = "Background";
+        public const string PlayerExplosion = "PlayerExplosion";
+        public const string EnemyExplosion = "EnemyExplosion";
     }
 
     public class AudioManager : MonoBehaviour
@@ -35,7 +35,7 @@ namespace Utilities
 
         private void Awake()
         {
-            Instance = this;
+            Instance ??= this;
             foreach (var sound in sounds)
             {
                 sound.source = gameObject.AddComponent<AudioSource>();
@@ -44,6 +44,8 @@ namespace Utilities
                 sound.source.pitch = sound.pitch;
                 sound.source.loop = sound.loop;
             }
+
+            Play("Background");
         }
 
         public void Play(string soundName)

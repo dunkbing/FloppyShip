@@ -1,20 +1,19 @@
-using System;
 using UnityEngine;
-using Utilities;
 
 namespace Entities
 {
     public class CircleBullet : MonoBehaviour, IMove
     {
+        public GameObject explosion;
         private Vector3 _targetPos;
         // private float _traveled;
         private readonly float _speed = 10f;
 
         private void Start()
         {
-            if (GameStats.CurrentPlayer)
+            if (Player.Instance)
             {
-                _targetPos = (GameStats.CurrentPlayer.transform.position - transform.position).normalized;
+                _targetPos = (Player.Instance.transform.position - transform.position).normalized;
             }
         }
 
@@ -27,6 +26,7 @@ namespace Entities
         private void OnTriggerEnter2D(Collider2D other)
         {
             Destroy(gameObject);
+            // Instantiate(explosion, transform.position, Quaternion.identity);
         }
 
         private void OnBecameInvisible()

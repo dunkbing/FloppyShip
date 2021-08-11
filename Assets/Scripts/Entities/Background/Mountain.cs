@@ -9,6 +9,7 @@ namespace Entities.Background
     {
         private float _length, _startPos;
         private readonly float _speed = 3;
+        public float parallaxEffect;
 
         private void Start()
         {
@@ -28,7 +29,7 @@ namespace Entities.Background
                 return;
             }
 
-            transform.position += Vector3.left * (_speed * Time.deltaTime);
+            transform.position += Vector3.left * (_speed * Time.deltaTime * parallaxEffect);
 
             if (transform.position.x <= _startPos - _length)
             {
