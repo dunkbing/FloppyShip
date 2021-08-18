@@ -35,10 +35,6 @@ namespace Entities
             // _gravity = rb.gravityScale;
             OnExplode += (() =>
             {
-                AdsManager.Instance.onEarnedReward += () =>
-                {
-                    anim.SetTrigger(TakeDmg);
-                };
                 AudioManager.Instance.Play("Explosion");
                 Alive = false;
                 // CameraController.Instance.Shake();
@@ -119,10 +115,6 @@ namespace Entities
                 starExplosion.Play();
                 AudioManager.Instance.Play("PowerUp");
             }
-            // else if (other.CompareTag("Bullet"))
-            // {
-            //     Explode();
-            // }
         }
 
         public void PlayGame()
@@ -147,6 +139,18 @@ namespace Entities
             color.r = 1f;
             spriteRenderer.color = color;
             Alive = true;
+        }
+
+        public void TakeDamage()
+        {
+            anim.SetTrigger(TakeDmg);
+            gameObject.layer = LayerMask.NameToLayer("Dmg");
+            Invoke(nameof(RestoreLayer), 0.3f);
+        }
+
+        private void RestoreLayer()
+        {
+            gameObject.layer = LayerMask.NameToLayer("Default");
         }
     }
 }

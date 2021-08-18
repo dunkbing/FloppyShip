@@ -9,11 +9,11 @@ namespace Utilities
 {
     public class AdsManager : MonoBehaviour, IUnityAdsListener
     {
-        readonly string gameId = "4208181";
-        readonly string mySurfacingId = "Rewarded_Android";
-        readonly bool testMode = true;
+        private const string GameId = "4270041";
+        private const string SurfacingId = "Rewarded_Android";
+        private const bool TestMode = false;
 
-        public UnityAction onEarnedReward;
+        public UnityAction OnEarnedReward;
         public static AdsManager Instance { get; private set; }
 
         private void Awake()
@@ -25,7 +25,7 @@ namespace Utilities
         {
             try
             {
-                Advertisement.Initialize(gameId, testMode);
+                Advertisement.Initialize(GameId, TestMode);
                 Advertisement.AddListener(this);
             }
             catch (Exception e)
@@ -36,8 +36,8 @@ namespace Utilities
 
         public void ShowRewardedVideo() {
             // Check if UnityAds ready before calling Show method:
-            if (Advertisement.IsReady(mySurfacingId)) {
-                Advertisement.Show(mySurfacingId);
+            if (Advertisement.IsReady(SurfacingId)) {
+                Advertisement.Show(SurfacingId);
             }
             else {
                 Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
@@ -46,7 +46,7 @@ namespace Utilities
 
         public bool ReadyToShow()
         {
-            return Advertisement.IsReady(mySurfacingId);
+            return Advertisement.IsReady(SurfacingId);
         }
 
         // Implement IUnityAdsListener interface methods:
@@ -57,7 +57,7 @@ namespace Utilities
                 // Define conditional logic for each ad completion status:
                 case ShowResult.Finished:
                     // Reward the user for watching the ad to completion.
-                    onEarnedReward?.Invoke();
+                    OnEarnedReward?.Invoke();
                     break;
                 case ShowResult.Skipped:
                     // Do not reward the user for skipping the ad.
@@ -69,7 +69,7 @@ namespace Utilities
         }
 
         public void OnUnityAdsReady (string surfacingId) {
-            if (surfacingId == mySurfacingId) {
+            if (surfacingId == SurfacingId) {
                 // Optional actions to take when theAd Unit or legacy Placement becomes ready (for example, enable the rewarded ads button)
                 // gameObject.GetComponent<Button>().interactable = true;
             }

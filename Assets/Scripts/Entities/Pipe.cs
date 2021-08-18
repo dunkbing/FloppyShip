@@ -24,7 +24,7 @@ namespace Entities
 
         public void Spawn()
         {
-            if (Random.Range(0, 10f) < 1f)
+            if (Random.Range(0, 10f) < 0.45f)
             {
                 ObjectPool.Instance.Spawn("Star", go =>
                 {

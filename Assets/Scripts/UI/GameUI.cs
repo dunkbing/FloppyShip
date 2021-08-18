@@ -17,11 +17,12 @@ namespace UI
         {
             Instance ??= this;
 
-            AdsManager.Instance.onEarnedReward += (() =>
+            AdsManager.Instance.OnEarnedReward += (() =>
             {
                 GameStats.State = GameState.Running;
                 Player.Instance.SetActive(true);
                 Player.Instance.PlayGame();
+                Player.Instance.TakeDamage();
                 pauseMenu.SetActive(false);
                 // spawning objects
                 Spawner.Instance.StartSpawning();
