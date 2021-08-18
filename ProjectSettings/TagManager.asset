@@ -21,7 +21,7 @@ TagManager:
   - Fragment
   - Bound
   - Obstacle
-  - 
+  - Dmg
   - 
   - 
   - 
@@ -50,6 +50,12 @@ TagManager:
   - name: Sky
     uniqueID: 337858229
     locked: 0
+  - name: Star
+    uniqueID: 3140153229
+    locked: 0
+  - name: Cloud
+    uniqueID: 26888701
+    locked: 0
   - name: Bg1
     uniqueID: 3649870211
     locked: 0
@@ -64,12 +70,6 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3565882977
-    locked: 0
-  - name: Star
-    uniqueID: 3140153229
-    locked: 0
-  - name: Cloud
-    uniqueID: 26888701
     locked: 0
   - name: Obstacle
     uniqueID: 4271769345
